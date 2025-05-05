@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locations | SmolWorld Vacation</title>
+  <link rel="icon" href="./logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee7db;
+    color: black;
+    margin: 0;
+    }
+    .page-header {
+      background: url('locations-banner.jpg') center center/cover no-repeat;
+      color: black;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .card a {
+     text-decoration: none;     
+    color: inherit;           
+    display: block;            
+    }
+    .card a:hover {
+    text-decoration: none;
+    color: inherit;
+    }
+
+
+    .card img {
+      transition: transform 0.3s;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+    .card-img-top {
+     height: 250px;        
+     width: 100%;         
+     object-fit: cover;    
+    }
+
+    .footer {
+      background-color: #004d4d;
+      color: white;
+      padding: 30px 0;
+      margin-top: 60px;
+    }
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body style="background-color: #eee7db;">
+
+<!-- Navbar -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4"> -->
+          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #004d4d; px-4">
+            <a class="navbar-brand" href="#" style="font-family: 'Poppins', sans-serif;"><img src="logo.png" alt="SmolWorld Logo" height="50"> SmolWorld</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" id = "navi-leter">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./hotels.html">Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tickets.html">Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./location.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cost.html">Cost</a></li>
+                </ul>
+                <div class="ms-lg-3 d-flex gap-2" id="over">
+                    <a href="./register.html" class="btn btn-light">Sign Up</a>
+                    <a href="./login.html" class="btn btn-outline-light">Log In</a>
+                </div>
+            </div>
+        </nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Explore Top Travel Locations</h1>
+    <p class="lead">Discover breathtaking destinations curated just for you</p>
+  </div>
+</section>
+
+<!-- Locations Grid -->
+<section class="container my-5">
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4 card">
+    <a href="paris.html">
+      <div class="card h-100 shadow-sm">
+        <img src="./pic/paris.jpg" class="card-img-top" alt="Paris">
+        <div class="card-body">
+          <h5 class="card-title">Paris, France</h5>
+          <p class="card-text">The city of lights and love, home to iconic landmarks like the Eiffel Tower and Louvre.</p>
+        </div>
+      </div>
+    </a>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4 card">
+    <a href="bali.html">
+      <div class="card h-100 shadow-sm">
+        <img src="./pic/bali.webp" class="card-img-top" alt="Bali">
+        <div class="card-body">
+          <h5 class="card-title">Bali, Indonesia</h5>
+          <p class="card-text">A tropical paradise known for its beaches, temples, and serene landscapes.</p>
+        </div>
+      </div>
+    </a>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4 card">
+    <a href="newyork.html">
+      <div class="card h-100 shadow-sm">
+        <img src="./pic/newyork.avif" class="card-img-top" alt="New York">
+        <div class="card-body">
+          <h5 class="card-title">New York, USA</h5>
+          <p class="card-text">The vibrant city that never sleeps — from Times Square to Central Park.</p>
+        </div>
+      </div>
+    </a>
+    </div>
+    <!-- Add more cards as needed -->
+  </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      const temp = document.createElement('div');
+      temp.innerHTML = data;
+
+      // Move styles into the <head>
+      const styles = temp.querySelectorAll('style');
+      styles.forEach(style => document.head.appendChild(style));
+
+      // Extract only the footer part
+      const footer = temp.querySelector('footer');
+      document.getElementById('footer-container').appendChild(footer);
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

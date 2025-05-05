@@ -1,0 +1,67 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee7db;
+    margin: 0;
+  }
+  .location-img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .stars i {
+    color: gold;
+  }
+  .location-detail {
+    margin-bottom: 4rem;
+  }
+
+  .nav-link {
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(20, 255, 179, 0.1); 
+    border-radius: 0.5rem;
+}
+  nav img.logo {
+    height: 50px;
+  }
+  .footer {
+    background-color: #154a4a;
+    color: white;
+    padding: 2rem 0;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;      
+    width: 100%;           
+}
+
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.social a {
+    color: #154a4a;
+    background: white;
+    border-radius: 50%;
+    margin: 0 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    font-size: 1.25rem;
+}
+
+.social a:hover {
+    transform: scale(1.2);
+    background-color: transparent;
+}
